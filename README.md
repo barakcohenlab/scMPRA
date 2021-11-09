@@ -42,4 +42,18 @@ bash ./run_cell_ranger.sh
 
 ### Cell barcode filtering 
 
-We only look at the 
+To further process the scMPRA barcode data, only the cells that have sufficient transcriptome information to be kept. 
+
+The cell barcode filter script error corrects the cell barcodes to the list of 10X filtered cell barcodes. The sript takes in the cell barcode file from processed expression matrix, which can be found in 
+
+```
+cellranger_job_name/outs/filtered_features_bc_matrix/barcodes.tsv.gz
+```
+
+as well as the parsed barcodes file.
+
+To run the the cell barcode filtering script, modify the following script:
+
+```
+sh cell_bcs_filtering.sh
+```
