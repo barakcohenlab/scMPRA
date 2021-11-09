@@ -6,8 +6,6 @@ This repository contains code, scripts, reasonably sized data associated with sc
 
 The code is sufficient to generate processed single-cell core promoter library expression data underlying the reproducibility plot, DE analysis.
 
-The scripts are sufficient for reproducing the scatterplot, UMAP, and heatmaps. 
-
 ## Prerequisite 
 All dependencies are described in conda environment mascot.yml. 
 
@@ -57,3 +55,26 @@ To run the the cell barcode filtering script, modify the following script:
 ```
 sh cell_bcs_filtering.sh
 ```
+
+### Extract single-cell CRS expression
+
+To extract single-cell CRS expression, modify and fun:
+
+```
+sh sc_crs_exp.sh
+```
+
+The script takes in several inputs:
+
+```
+--quint : the directory to the cell barcode filtered barcode file (5 columns hence quint)
+--promlib: the directory with the promoter id and cBC pair.
+--out: output file name.
+--exp: prefix to the output file name.
+```
+
+The script produces two outputs:
+1. The normalized expression for each cBC per cell.
+2. The expression mean, variance, auc for each CRS. 
+
+
