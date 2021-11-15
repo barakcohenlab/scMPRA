@@ -20,7 +20,7 @@ chmod -x ./scMPRA_parsing
 ```
 
 ```
-./scMPRA_parsing Read1.fastq.gz Read2.fastq.gz 
+./scMPRA_parsing Read1.fastq.gz Read2.fastq.gz > somefile.tsv
 ```
 
 The code should finish within an hour using a single GPU with 8 Gb of memory. 
